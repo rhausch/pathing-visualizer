@@ -1,0 +1,76 @@
+#legend > ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 28px 0 0;
+}
+
+#legend div {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.bot {
+    border: 1px solid rgb(75,0,0);
+    background-color: rgb(250,0,0);
+}
+
+.empty {
+    border: 1px solid rgb(175,175,250);
+    background-color: rgb(250,250,250);
+    animation-name: emptyAnimation;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes emptyAnimation {
+    0% {
+        transform: scale(1.0);
+        background-color: rgb(10,10,50);
+    }
+    99% {
+        transform: scale(0.1);
+        background-color: rgb(10,10,50);
+    }
+    100% {
+        transform: scale(1.0);
+        background-color: rgb(250,250,250);
+    }
+}
+
+.goal {
+    border: 1px solid rgb(250,0,0);
+    background-color: rgb(250,250,0);
+}
+
+.wall {
+    boarder: 1px solid rgb(0,0,0);
+    background-color: rgb(10,10,50);
+    animation-name: wallAnimation;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes wallAnimation {
+    0% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+#board td {
+    width: 10px;
+    height: 10px;
+}
